@@ -6,11 +6,11 @@ RUN mkdir /sample_rails_application
 WORKDIR /sample_rails_application
 COPY Gemfile /sample_rails_application/Gemfile
 COPY Gemfile.lock /sample_rails_application/Gemfile.lock
-COPY package.json /sample_rails_application/package.json
-COPY yarn.lock /sample_rails_application/yarn.lock
+#COPY package.json /sample_rails_application/package.json
+#COPY yarn.lock /sample_rails_application/yarn.lock
 RUN bundle install
 RUN yarn install --check-files
-COPY . /sample_rails_application
+#COPY . /sample_rails_application
 
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
