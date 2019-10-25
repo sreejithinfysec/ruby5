@@ -21,8 +21,8 @@ gem "factory_bot"
 gem "factory_bot_rails"
 
 group :development, :test do
-  # gem 'debase'
-  # gem 'ruby-debug-ide'
+   gem 'debase'
+   gem 'ruby-debug-ide'
   gem "rspec-rails"
   gem "simplecov"
   gem 'sqlite3', '1.4.1'
