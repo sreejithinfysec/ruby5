@@ -4,7 +4,7 @@ services:
   db:
     image: postgres
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
     ports:
@@ -15,10 +15,16 @@ services:
     volumes:
       - .:/sample_rails_application
       - /sample_rails_application/node_modules
+      - sprockets_cache:/sprockets_cache
     ports:
       - "3000:3000"
       # Ports required for debugging
       - "1234:1234"
       - "26166:26168"
+    environment:
+      - SPROCKETS_CACHE=/sprockets_cache
     depends_on:
       - db
+volumes:
+  postgres_data:
+  sprockets_cache:
