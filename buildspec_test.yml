@@ -9,8 +9,9 @@ batch:
 phases:
   install:
     runtime-versions:
-      ruby: 2.7
+      ruby: latest
     commands:
+      - bundle install
 
   pre_build:
     commands:
