@@ -1,0 +1,23 @@
+version: 0.2
+
+batch:
+  fast-fail: false
+  build-list:
+    - identifier: build1
+    - identifier: build2
+
+phases:
+  install:
+    runtime-versions:
+      ruby: 2.7
+    commands:
+
+  pre_build:
+    commands:
+
+  build:
+    commands:
+      - bundle exec rspec
+
+  post_build:
+    commands:
