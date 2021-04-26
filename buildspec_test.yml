@@ -11,6 +11,7 @@ phases:
     runtime-versions:
       ruby: latest
     commands:
+      - pwd
 
   pre_build:
     commands:
@@ -20,6 +21,3 @@ phases:
   build:
     commands:
       - bundle exec rspec
-
-  post_build:
-    commands:
