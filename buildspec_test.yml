@@ -11,10 +11,11 @@ phases:
     runtime-versions:
       ruby: latest
     commands:
-      - bundle install
 
   pre_build:
     commands:
+      - gem install bundler
+      - bundle install
 
   build:
     commands:
