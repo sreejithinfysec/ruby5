@@ -1,0 +1,17 @@
+version: 0.2
+
+batch:
+  fast-fail: false
+  build-matrix:
+    static:
+      ignore-failure: false
+      env:
+        compute-type: BUILD_GENERAL1_SMALL
+    dynamic:
+      buildspec:
+        - buildspec_test_and_build.yml
+      env:
+        variables:
+          TEST_VARIABLE:
+            - AAA
+            - BBB
