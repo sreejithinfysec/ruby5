@@ -4,7 +4,13 @@ batch:
   fast-fail: false
   build-graph:
     - identifier: build1
+      env:
+        compute-type: BUILD_GENERAL1_SMALL
+        buildspec_file: buildspec_test.yml
     - identifier: build2
+      env:
+        compute-type: BUILD_GENERAL1_SMALL
+        buildspec_file: buildspec_test.yml
 
 phases:
   install:
