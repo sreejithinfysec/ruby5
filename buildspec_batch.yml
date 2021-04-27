@@ -5,8 +5,6 @@ batch:
   build-matrix:
     static:
       ignore-failure: false
-      env:
-        compute-type: BUILD_GENERAL1_SMALL
     dynamic:
       buildspec:
         - buildspec_test_and_build.yml
@@ -15,3 +13,20 @@ batch:
           TEST_VARIABLE:
             - AAA
             - BBB
+
+phases:
+  install:
+    runtime-versions:
+      ruby: latest
+    commands:
+      - pwd
+      - env|grep TEST
+
+  pre_build:
+    commands:
+      - gem install bundler
+      - bundle install
+
+  build:
+    commands:
+      - bundle exec rspec
