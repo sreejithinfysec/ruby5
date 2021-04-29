@@ -7,3 +7,7 @@ batch:
       buildspec: buildspecs/build1.yml
     - identifier: build2
       buildspec: buildspecs/build2.yml
+
+artifacts:
+  files:
+    - "**/*"
