@@ -2,31 +2,8 @@ version: 0.2
 
 batch:
   fast-fail: false
-  build-matrix:
-    static:
-      ignore-failure: false
-    dynamic:
-      buildspec:
-        - buildspecs/tests.yml
-      env:
-        variables:
-          TEST_VARIABLE:
-            - AAA
-            - BBB
-
-phases:
-  install:
-    runtime-versions:
-      ruby: latest
-    commands:
-      - pwd
-      - env|grep TEST
-
-  pre_build:
-    commands:
-      - gem install bundler
-      - bundle install
-
-  build:
-    commands:
-      - bundle exec rspec
+  build-list:
+    - identifier: build1
+      buildspec: buildspecs/build1.yml
+    - identifier: build2
+      buildspec: buildspecs/build2.yml
