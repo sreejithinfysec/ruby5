@@ -15,7 +15,6 @@ phases:
     commands:
       - echo "BUILD1"
       - pwd
-      - env|grep TEST
       - git diff
 
   pre_build:
