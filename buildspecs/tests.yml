@@ -13,8 +13,8 @@ phases:
     runtime-versions:
       ruby: 2.7
     commands:
-      - echo "I'm alive!"
       - pwd
+      - echo "I'm alive!"
       - git diff
 
   pre_build:
