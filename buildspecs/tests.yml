@@ -8,6 +8,44 @@ batch:
     - identifier: build2
       buildspec: buildspecs/build2.yml
 
+phases:
+  install:
+    runtime-versions:
+      ruby: 27
+    commands:
+      - echo "BUILD1"
+      - pwd
+      - env|grep TEST
+      - git diff
+
+  pre_build:
+    commands:
+      - gem install bundler
+      - bundle install
+
+  build:
+    commands:
+      - bundle exec rspec
+
+phases:
+  install:
+    runtime-versions:
+      ruby: 27
+    commands:
+      - echo "BUILD1"
+      - pwd
+      - env|grep TEST
+      - git diff
+
+  pre_build:
+    commands:
+      - gem install bundler
+      - bundle install
+
+  build:
+    commands:
+      - bundle exec rspec
+
 artifacts:
   files:
     - "**/*"
