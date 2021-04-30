@@ -3,10 +3,10 @@ version: 0.2
 batch:
   fast-fail: false
   build-list:
-    - identifier: build1
-      buildspec: buildspecs/build1.yml
-    - identifier: build2
-      buildspec: buildspecs/build2.yml
+    - identifier: tests1
+      buildspec: buildspecs/tests1.yml
+    - identifier: tests2
+      buildspec: buildspecs/tests2.yml
 
 phases:
   install:
