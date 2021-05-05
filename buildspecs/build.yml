@@ -1,13 +1,18 @@
 version: 0.2
 
+batch:
+  fast-fail: false
+  build-list:
+    - identifier: tests1
+    - identifier: tests2
+
 phases:
   install:
     runtime-versions:
-      ruby: 30
+      ruby: 2.7
     commands:
-      - echo "BUILD2"
       - pwd
-      - env|grep TEST
+      - echo "I'm alive!"
       - git diff
 
   pre_build:

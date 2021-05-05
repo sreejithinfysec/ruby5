@@ -4,9 +4,7 @@ batch:
   fast-fail: false
   build-list:
     - identifier: tests1
-      buildspec: buildspecs/tests1.yml
     - identifier: tests2
-      buildspec: buildspecs/tests2.yml
 
 phases:
   install:
