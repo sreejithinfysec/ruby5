@@ -11,18 +11,12 @@ phases:
     runtime-versions:
       ruby: 2.7
     commands:
-      - pwd
       - echo "I'm alive!"
       - git diff
 
-  pre_build:
-    commands:
-      - gem install bundler
-      - bundle install
-
   build:
     commands:
-      - bundle exec rspec
+      - echo "Here happens image docker building"
 
 artifacts:
   files:
