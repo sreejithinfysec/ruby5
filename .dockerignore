@@ -9,6 +9,5 @@ babel-config.js
 docker-compose.yml
 Dockerfile
 Guardfile
-package.json
 postcss.config.js
 Procfile
