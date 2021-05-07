@@ -13,7 +13,7 @@ phases:
 
   build:
     commands:
-      - docker build -t sample_rails_app:latest .
+      - docker build -t sample_rails_app:${CODEBUILD_RESOLVED_SOURCE_VERSION} .
 
 artifacts:
-  files:
+  exclude_path
