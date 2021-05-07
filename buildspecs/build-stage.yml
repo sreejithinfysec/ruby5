@@ -16,4 +16,5 @@ phases:
       - docker build -t sample_rails_app:${CODEBUILD_RESOLVED_SOURCE_VERSION} .
 
 artifacts:
-  exclude_path
+  files:
+    - log/*
