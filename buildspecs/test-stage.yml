@@ -6,8 +6,12 @@ batch:
       ignore-failure: true
     dynamic:
       buildspec:
-        - buildspecs/test-stage-1.yml
-        - buildspecs/test-stage-2.yml
+        - buildspecs/test-stage.yml
+      env:
+        variables:
+          TEST_VARIABLE:
+            - abc
+            - cde
 
 phases:
   install:
@@ -18,14 +22,9 @@ phases:
       - echo "I'm alive!"
       - git diff
 
-  pre_build:
-    commands:
-      - gem install bundler
-      - bundle install
-
   build:
     commands:
-      - bundle exec rspec
+      - echo "Tests stage!"
 
 artifacts:
   files:
