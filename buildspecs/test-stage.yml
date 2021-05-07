@@ -1,13 +1,13 @@
 version: 0.2
 
 batch:
-  fast-fail: false
-  static:
-    ignore-failure: true
-  dynamic:
-    buildspec:
-      - buildspecs/test-stage-1.yml
-      - buildspecs/test-stage-2.yml
+  build-matrix:
+    static:
+      ignore-failure: true
+    dynamic:
+      buildspec:
+        - buildspecs/test-stage-1.yml
+        - buildspecs/test-stage-2.yml
 
 phases:
   install:
