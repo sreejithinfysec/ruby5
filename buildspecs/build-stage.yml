@@ -10,14 +10,10 @@ phases:
   install:
     runtime-versions:
       ruby: 2.7
-    commands:
-      - echo "I'm alive!"
-      - git diff
 
   build:
     commands:
-      - echo "Here happens image docker building"
+      - docker build -t sample_rails_app:latest .
 
 artifacts:
   files:
-    - "**/*"

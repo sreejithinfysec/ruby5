@@ -1,0 +1,14 @@
+.idea
+buildspecs
+log/*
+spec
+test
+.rspec
+.rubocop
+babel-config.js
+docker-compose.yml
+Dockerfile
+Guardfile
+package.json
+postcss.config.js
+Procfile
