@@ -6,7 +6,7 @@ batch:
       ignore-failure: true
     dynamic:
       buildspec:
-        - buildspecs/test-stage.yml
+        - buildspecs/test-stage-1.yml
       env:
         variables:
           TEST_VARIABLE:
