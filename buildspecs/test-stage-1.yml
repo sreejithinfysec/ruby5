@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      ruby: 2.7
+    commands:
+      - echo "I'm test-stage-1 and I'm alive!"
+
+artifacts:
+  files:
+    - "**/*"

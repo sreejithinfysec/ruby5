@@ -2,10 +2,12 @@ version: 0.2
 
 batch:
   fast-fail: false
-  build-list:
-    - identifier: tests1
-    - identifier: tests2
-
+    static:
+      ignore-failure: true
+    dynamic:
+      buildspec:
+        - buildspecs/test-stage-1
+        - buildspecs/test-stage-2
 phases:
   install:
     runtime-versions:
