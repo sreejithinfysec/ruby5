@@ -1,11 +1,5 @@
 version: 0.2
 
-batch:
-  fast-fail: false
-  build-list:
-    - identifier: tests1
-    - identifier: tests2
-
 phases:
   install:
     runtime-versions:
@@ -14,7 +8,8 @@ phases:
   build:
     commands:
       - docker build -t sample_rails_app:${CODEBUILD_RESOLVED_SOURCE_VERSION} .
+      - echo "repository-name" > docker-image-to-deploy.txt
 
 artifacts:
   files:
-    - log/*
+    - docker-image-to-deploy.txt

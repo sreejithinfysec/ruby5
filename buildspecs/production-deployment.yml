@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      ruby: 2.7
+    commands:
+      - pwd
+      - echo "Deploying to PRODUCTION"
+      - git diff
+
+  build:
+    commands:
+      - echo "Tests stage!"
