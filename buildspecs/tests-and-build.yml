@@ -13,3 +13,4 @@ phases:
 artifacts:
   files:
     - docker-image-to-deploy.txt
+    - buildspecs/**/*
