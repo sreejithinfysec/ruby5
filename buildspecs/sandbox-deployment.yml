@@ -7,7 +7,7 @@ phases:
     commands:
       - pwd
       - echo "Deploying to SANDBOX"
-      - git diff
+      - cat docker-image-to-deploy.txt
 
   build:
     commands:
