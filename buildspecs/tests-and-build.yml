@@ -7,7 +7,7 @@ phases:
 
   build:
     commands:
-      - docker build -t sample_rails_app:${CODEBUILD_RESOLVED_SOURCE_VERSION} .
+#      - docker build -t sample_rails_app:${CODEBUILD_RESOLVED_SOURCE_VERSION} .
       - echo "repository-name" > docker-image-to-deploy.txt
 
 artifacts:
