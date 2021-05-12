@@ -6,10 +6,10 @@ phases:
       ruby: 2.7
     commands:
       - aws sts get-caller-identity
-      - aws kms list-keys
+      - aws kms describe-key --key-id arn:aws:kms:eu-west-1:487483287434:key/ec84f810-ec41-45a0-ad9e-3575324d26c4
+
   build:
     commands:
-#      - docker build -t sample_rails_app:${CODEBUILD_RESOLVED_SOURCE_VERSION} .
       - echo "repository-name" > docker-image-to-deploy.txt
 
 artifacts:
