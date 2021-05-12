@@ -6,7 +6,7 @@ phases:
       ruby: 2.7
     commands:
       - aws sts get-caller-identity
-
+      - aws kms list-keys
   build:
     commands:
 #      - docker build -t sample_rails_app:${CODEBUILD_RESOLVED_SOURCE_VERSION} .
