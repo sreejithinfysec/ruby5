@@ -10,6 +10,7 @@ phases:
       - curl -Lo /tmp/sops.deb https://github.com/mozilla/sops/releases/download/v3.7.1/sops_3.7.1_amd64.deb
       - dpkg -i /tmp/sops.deb
       - sops --decrypt deployment/secrets.staging.yaml
+      - kubectl eks update-kubeconfig --name grze
 
   build:
     commands:
