@@ -4,6 +4,8 @@ phases:
   install:
     runtime-versions:
       ruby: 2.7
+    commands:
+      - aws sts get-caller-identity
 
   build:
     commands:
