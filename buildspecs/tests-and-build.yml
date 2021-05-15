@@ -10,7 +10,7 @@ phases:
       - curl -Lo /tmp/sops.deb https://github.com/mozilla/sops/releases/download/v3.7.1/sops_3.7.1_amd64.deb
       - dpkg -i /tmp/sops.deb
       - sops --decrypt deployment/secrets.staging.yaml
-      - aws eks update-kubeconfig --name grze --role-arn arn:aws:iam::487483287434:role/demo-pipeline-role-tf
+      - aws eks update-kubeconfig --name grze --role-arn arn:aws:iam::487483287434:role/application-ci-cd-pipeline-eks-access
       - kubectl get ns -o wide
 
   build:
