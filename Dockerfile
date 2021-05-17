@@ -1,5 +1,5 @@
 FROM public.ecr.aws/bitnami/ruby:2.7
-RUN apt-get update && apt-get install -y build-essential libpq-dev nodejs postgresql-client yarn && npm install --global yarn
+RUN apt-get update && apt-get install -y build-essential libpq-dev nodejs npm postgresql-client yarn && npm install --global yarn
 RUN mkdir /sample_rails_application
 WORKDIR /sample_rails_application
 COPY Gemfile /sample_rails_application/Gemfile
