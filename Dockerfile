@@ -11,7 +11,7 @@ COPY package.json /sample_rails_application/package.json
 COPY yarn.lock /sample_rails_application/yarn.lock
 RUN gem install bundler -v '2.2.15'
 RUN bundle install
-RUN yarn install --check-files
+RUN yarn install
 COPY . /sample_rails_application
 EXPOSE 3000
 
