@@ -15,7 +15,13 @@ phases:
 
   build:
     commands:
-      - echo "repository-name" > docker-image-to-deploy.txt
+      - docker build -t $ECR_REPOSITORY_URL:$CODEBUILD_BUILD_NUMBER
+      - docker tag $ECR_REPOSITORY_URL:$CODEBUILD_BUILD_NUMBER $ECR_REPOSITORY_URL:latest
+
+      - docker push $ECR_REPOSITORY_URL:$CODEBUILD_BUILD_NUMBER
+      - docker push $ECR_REPOSITORY_URL:latest
+
+      - echo "$ECR_REPOSITORY_URL:$CODEBUILD_BUILD_NUMBER" > docker-image-to-deploy.txt
 
 artifacts:
   files:
