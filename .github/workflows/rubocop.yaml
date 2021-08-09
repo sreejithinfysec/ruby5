@@ -5,8 +5,6 @@ jobs:
     name: runner / rubocop
     runs-on: ubuntu-latest
     steps:
-      - name: check rubocop.yml 
-        run: ls -al /home/runner/work/stp-devops-container-image
       - name: Check out code
         uses: actions/checkout@v1
       - uses: ruby/setup-ruby@v1
