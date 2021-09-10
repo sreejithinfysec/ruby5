@@ -22,6 +22,7 @@ group :development, :test do
   # gem 'ruby-debug-ide'
   gem 'rspec-rails',        '5.0.1'
   gem 'simplecov',          '0.21.2'
+  gem 'simplecov-formatter-badge', require: false
   gem 'sqlite3',            '1.4.2'
   gem 'byebug',             '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
 end

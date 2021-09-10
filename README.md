@@ -1,3 +1,5 @@
+![coverage](https://github.com/guidocollino/sample_rails_app/actions/workflows/rspec.yml/coverage/coverage.svg?event=push)
+
 # Ruby on Rails Tutorial sample application
 
 This is a fork of the [*Ruby on Rails Tutorial*](http://www.railstutorial.org/) application by Michael Hartl. 

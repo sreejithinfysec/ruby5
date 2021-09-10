@@ -1,8 +1,21 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'support/factory_bot'
-# require 'simplecov'
-# SimpleCov.start
+require 'simplecov'
+require 'simplecov-formatter-badge'
+
+SimpleCov.start 'rails' do
+  add_filter '/app/uploaders/'
+  add_filter '/bin/'
+  add_filter '/db/'
+  add_filter '/spec/'
+
+  SimpleCov.formatter =
+  SimpleCov::Formatter::MultiFormatter.new \
+    [SimpleCov::Formatter::HTMLFormatter,
+     SimpleCov::Formatter::BadgeFormatter]
+end
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
