@@ -17,7 +17,6 @@ gem 'jbuilder',                   '2.10.0'
 gem 'bootsnap',                   '1.7.2', require: false
 gem 'factory_bot',                '6.1.0'
 gem 'factory_bot_rails',          '6.1.0'
-gem "brakeman"
 group :development, :test do
   # gem 'debase'
   # gem 'ruby-debug-ide'
