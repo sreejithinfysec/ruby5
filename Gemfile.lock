@@ -294,7 +294,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
-
+  x86_64-linux
 DEPENDENCIES
   active_storage_validations (= 0.8.9)
   aws-sdk-s3 (= 1.87.0)
