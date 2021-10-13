@@ -1,0 +1,16 @@
+name: Brakeman
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: install brakeman
+      run: bundle install
+
+    - name: run brakeman
+      run: brakeman sample_rails_app
+
