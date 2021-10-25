@@ -1,8 +1,8 @@
 {
   "ignored_warnings": [
     {
-      "confidence": "Weak"
-      "category": "Dynamic Render Path"
+      "confidence": "Weak",
+      "category": "Dynamic Render Path",
       "check": "Render",
       "message": "Render path contains parameter value",
       "code": "render(action => User.find(params[:id]).microposts.paginate(:page => params[:page]), {})",
@@ -10,8 +10,8 @@
       "line": 19
     },
     {
-      "confidence": "Weak"
-      "category": "Dynamic Render Path"
+      "confidence": "Weak",
+      "category": "Dynamic Render Path",
       "check": "Render",
       "message": "Render path contains parameter value",
       "code": "render(action => User.find(params[:id]).followers.paginate(:page => params[:page]), {})",
@@ -19,8 +19,8 @@
       "line": 25
     },
     {
-      "confidence": "Weak"
-      "category": "HTTP Verb Confusion"
+      "confidence": "Weak",
+      "category": "HTTP Verb Confusion",
       "check": "VerbConfusion",
       "message": "Potential HTTP verb confusion. `HEAD` is routed like `GET` but `request.get?` will return `false`",
       "code": "session[:forwarding_url] = request.original_url if request.get?",
