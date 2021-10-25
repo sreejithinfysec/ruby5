@@ -1,31 +1,31 @@
 {
   "ignored_warnings": [
     {
-      "confidence": "Weak",
-      "category": "Dynamic Render Path",
-      "check": "Render",
-      "message": "Render path contains parameter value",
-      "code": "render(action => User.find(params[:id]).microposts.paginate(:page => params[:page]), {})",
-      "file": "app/views/users/show.html.erb",
-      "line": 19
+      "Confidence": "Weak",
+      "Category": "Dynamic Render Path",
+      "Check": "Render",
+      "Message": "Render path contains parameter value",
+      "Code": "render(action => User.find(params[:id]).microposts.paginate(:page => params[:page]), {})",
+      "File": "app/views/users/show.html.erb",
+      "Line": 19
     },
     {
-      "confidence": "Weak",
-      "category": "Dynamic Render Path",
-      "check": "Render",
-      "message": "Render path contains parameter value",
-      "code": "render(action => User.find(params[:id]).followers.paginate(:page => params[:page]), {})",
-      "file": "app/views/users/show_follow.html.erb",
-      "line": 25
+      "Confidence": "Weak",
+      "Category": "Dynamic Render Path",
+      "Check": "Render",
+      "Message": "Render path contains parameter value",
+      "Code": "render(action => User.find(params[:id]).followers.paginate(:page => params[:page]), {})",
+      "File": "app/views/users/show_follow.html.erb",
+      "Line": 25
     },
     {
-      "confidence": "Weak",
-      "category": "HTTP Verb Confusion",
-      "check": "VerbConfusion",
-      "message": "Potential HTTP verb confusion. `HEAD` is routed like `GET` but `request.get?` will return `false`",
-      "code": "session[:forwarding_url] = request.original_url if request.get?",
-      "file": "app/helpers/sessions_helper.rb",
-      "line": 60
+      "Confidence": "Weak",
+      "Category": "HTTP Verb Confusion",
+      "Check": "VerbConfusion",
+      "Message": "Potential HTTP verb confusion. `HEAD` is routed like `GET` but `request.get?` will return `false`",
+      "Code": "session[:forwarding_url] = request.original_url if request.get?",
+      "File": "app/helpers/sessions_helper.rb",
+      "Line": 60
     }
   ],
   "updated": "2021-10-25 13:48:59 -0700",
