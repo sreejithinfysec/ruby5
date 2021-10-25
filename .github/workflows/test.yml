@@ -13,7 +13,7 @@ jobs:
         ruby-version: '2.7'
 
     - name: install brakeman
-      run: bundle install
+      run: bundle install brakeman
 
     - name: run brakeman
       run: brakeman sample_rails_app
