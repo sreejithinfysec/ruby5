@@ -16,5 +16,5 @@ jobs:
       run: gem install brakeman
 
     - name: run brakeman
-      run: brakeman
+      run: brakeman --except Render,VerbConfusion
 
