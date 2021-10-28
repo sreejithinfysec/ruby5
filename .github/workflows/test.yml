@@ -9,10 +9,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     
-    - name: use-ruby 3.0.2
+    - name: use-ruby 2.7
       uses: ./
       with:
-        ruby-version: '3.0.2'
+        ruby-version: '2.7'
 
     - name: install brakeman
       run: gem install brakeman
