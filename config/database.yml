@@ -4,8 +4,8 @@ default: &default
 
 development:
   <<: *default
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  database: sample_app_development
 
 #development:
 #  <<: *default
@@ -18,8 +18,8 @@ development:
 
 test:
   <<: *default
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  database: sample_app_test
 
 #test:
 #  <<: *default
