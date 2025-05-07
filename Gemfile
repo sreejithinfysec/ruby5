@@ -20,7 +20,7 @@ gem 'factory_bot_rails',          '6.1.0'
 group :development, :test do
   # gem 'debase'
   # gem 'ruby-debug-ide'
-  gem 'rspec-rails',        '5.1.2'
+  gem 'rspec-rails', '8.0.0'
   gem 'simplecov',          '0.21.2'
   gem 'sqlite3',            '1.4.2'
   gem 'byebug',             '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
